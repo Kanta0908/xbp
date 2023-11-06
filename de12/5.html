@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>デザイン演習課題</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head>
+<body>
+    <center><h1>デザイン演習第５回</h1></center>
+    <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
+<div>
+    <center><h3>中国語翻訳システム</h3></center>
+  日本語を中国語に変換してくれるシステムです。
+
+
+</div>
+
+    <div>
+        <pre><code>
+            
+            from googletrans import Translator
+            from sys import exit
+            
+            def chose_lang():
+                lang_mode = int(input("言語を選択してください[1:英語/2:中国語[簡体字]"))
+                if lang_mode == 1:
+                    lang = "en"
+                elif lang_mode == 2:
+                    lang= "zh-cn"
+                else:
+                    print("指定の言語番号を選択してください")
+                    exit()
+                return lang
+            
+            def trans_ja_to_en_or_cn(lang, context):
+                translator = Translator()
+                trans_ja_to_select_lang = translator.translate(context, src="ja", dest=lang)
+                translated_text = trans_ja_to_select_lang.text
+                return translated_text
+            
+            
+            if __name__ == "__main__":
+                lang = chose_lang()
+                context = input("つぶやく内容を入力してください:")
+                print(trans_ja_to_en_or_cn(lang, context))      
+                  
+        </code></pre>
+        
+         <!-- ①↓に文字を書いてみよう -->
+    
+    </div>
+
+</body>
+</html>
