@@ -30,7 +30,7 @@ html, body {
 	background: #92b5a9;
 }
 h1{
-    text-indent: 0em;
+    text-indent: 0em; font-family: fantasy; font-size: 3rem;
 }
 h2{
     margin-left: 1em;
