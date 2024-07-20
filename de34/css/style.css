@@ -80,6 +80,7 @@ span.blackback{
 	width: 100%;
 }
 ul{
+    font-family: monospace;
     margin-left: 2em;
 }
 img{
